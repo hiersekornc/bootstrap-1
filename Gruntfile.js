@@ -353,7 +353,7 @@ module.exports = function(grunt) {
     grunt.config('concat.dist_tpls.src', grunt.config('concat.dist_tpls.src')
                  .concat(srcFiles).concat(tpljsFiles));
 
-    grunt.task.run(['concat', 'uglify', 'makeModuleMappingFile', 'makeRawFilesJs']);
+    grunt.task.run(['html2js', 'concat', 'uglify', 'makeModuleMappingFile', 'makeRawFilesJs']);
   });
 
   grunt.registerTask('test', 'Run tests on singleRun karma server', function () {
